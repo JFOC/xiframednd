@@ -5,11 +5,20 @@ ul, li {
 	padding: 0px;
 }
 
+ul {
+	display: block;
+	width: 200px;
+}
+
 li {
 	line-height: 35px;
+	width: 200px;
+	background-color: red;
+	margin-bottom: 5px;
+	display: block;
 }
 
 li.drop-hover {
 	height: 35px;
-	border: 2px dashed red;
+	border: 2px dashed #fff;
 }
