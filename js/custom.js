@@ -8,18 +8,22 @@ $(function () {
 
 	iframe = document.createElement('IFRAME');
 	iframe.src = "frame1.html";
-	iframe.frameborder = 0;
-	iframe.scolling = "no";
+	iframe.setAttribute('frameborder', 0);
+	iframe.setAttribute("scolling", "no");
 	iframe.id = "frame1";
 
 	$(iframe).on('load', function () {
 
 		$('li', document.getElementById('mainDraggables')).draggable({
-			connectToSortable: $('#frame1').contents().find('ul').sortable({
+			connectToSortable: $(this).contents().find('ul').sortable({
 				revert: true,
+				iframefix: true,
 	            cancel: '',
 	            helper: 'clone',
-	            iframefix: true
+	            placeholder: "drop-hover",
+	            over: function (event, ui) {
+	            	console.log(ui);
+	            }
 			}),
 			helper: "clone",
 	        revert: "invalid",
