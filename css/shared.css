@@ -8,3 +8,8 @@ ul, li {
 li {
 	line-height: 35px;
 }
+
+li.drop-hover {
+	height: 35px;
+	border: 2px dashed red;
+}
