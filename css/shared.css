@@ -1,0 +1,10 @@
+ul, li {
+	list-style: none;
+	list-style-type: none;
+	margin: 0px;
+	padding: 0px;
+}
+
+li {
+	line-height: 35px;
+}
