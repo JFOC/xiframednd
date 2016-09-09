@@ -18,6 +18,14 @@ li {
 	display: block;
 }
 
+li.gotKids {
+	background-color: transparent;
+}
+
+li.gotKids li {
+	margin-left: 10px;
+}
+
 li.drop-hover {
 	height: 35px;
 	border: 2px dashed #fff;

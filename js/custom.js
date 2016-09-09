@@ -15,15 +15,13 @@ $(function () {
 	$(iframe).on('load', function () {
 
 		$('li', document.getElementById('mainDraggables')).draggable({
-			connectToSortable: $(this).contents().find('ul').sortable({
+			connectToSortable: $('#frames iframe').contents().find('ul').sortable({
 				revert: true,
 				iframefix: true,
 	            cancel: '',
 	            helper: 'clone',
 	            placeholder: "drop-hover",
-	            over: function (event, ui) {
-	            	console.log(ui);
-	            }
+	            connectWith: $('#frames iframe').contents().find('ul'),
 			}),
 			helper: "clone",
 	        revert: "invalid",
